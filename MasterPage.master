@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style2
+        {
+            width: 1473px;
+            height: 652px;
+        }
+        .style3
+        {
+            height: 122px;
+            text-align: left;
+        }
+        .style5
+        {
+            width: 1455px;
+            height: 409px;
+        }
+        .style6
+        {
+            width: 150px;
+            text-align: left;
+            height: 409px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+<div id="header">
+            <!--页面头部-->
+        </div>
+    <table style="text-align: center" class="style2">
+        <tr>
+            <td class="style3" colspan="2">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style6" dir="ltr">
+                <asp:TreeView ID="TreeView1" runat="server" BorderStyle="Inset">
+                    <Nodes>
+                        <asp:TreeNode Text="修改账号信息" Value="修改信息">
+                            <asp:TreeNode Text="修改密码" Value="修改密码" NavigateUrl="~/ChangePassword.aspx"></asp:TreeNode>
+                        </asp:TreeNode>
+                        <asp:TreeNode Text="学生信息管理" Value="学生信息管理" NavigateUrl="~/See_student.aspx">
+                        </asp:TreeNode>
+                        <asp:TreeNode Text="试卷信息管理" Value="试卷信息管理">
+                            <asp:TreeNode Text="管理试题信息" Value="浏览试题信息" SelectAction="Expand">
+                                <asp:TreeNode NavigateUrl="~/Manage_Gapfilling.aspx" Text="填空题" Value="填空题">
+                                </asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/Manage_Judge.aspx" Text="判断题" Value="判断题">
+                                </asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/Manage_Only_Choose.aspx" Text="单选题" Value="单选题">
+                                </asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/Manage_Many_Choose.aspx" Text="多选题" Value="多选题">
+                                </asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode Text="添加试题" Value="添加试题"></asp:TreeNode>
+                            <asp:TreeNode Text="删除试题" Value="删除试题"></asp:TreeNode>
+                        </asp:TreeNode>
+                        <asp:TreeNode Text="阅卷模块管理" Value="阅卷模块">
+                            <asp:TreeNode Text="分数汇总" Value="分数汇总"></asp:TreeNode>
+                            <asp:TreeNode Text="分数查询" Value="分数查询" NavigateUrl="~/Grade.aspx"></asp:TreeNode>
+                        </asp:TreeNode>
+                    </Nodes>
+                </asp:TreeView>
+            </td>
+            <td class="style5">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
