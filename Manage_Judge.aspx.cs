@@ -12,24 +12,24 @@ public partial class Manage_judge : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            if (Session["AdminName"] == null)
+            if (Session["AdminName"] == null)//如果未登录则回到登录页面
             {
                 Response.Redirect("login.aspx");
             }
-            if (!IsPostBack)
+            if (!IsPostBack)//初始显示判断题
             {
                 selectStr = "SELECT id AS 题号,subject AS 题目,answer AS 答案 FROM judge";
                 Show(selectStr);
             }
         }
     }
-    private void Show(string seleStr)
+    private void Show(string seleStr)//通过SQL语句绑定GridView
     {
         DataSet ds = SqlHelper.GetDataSet(seleStr);
         GridView1.DataSource = ds;
         GridView1.AllowPaging = true;
         GridView1.DataKeyNames = new string[] { "题号" };
-        GridView1.PageSize = 10;
+        GridView1.PageSize = 15;
         GridView1.DataBind();
     }
     

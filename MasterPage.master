@@ -51,21 +51,14 @@
                         <asp:TreeNode Text="学生信息管理" Value="学生信息管理" NavigateUrl="~/See_student.aspx">
                         </asp:TreeNode>
                         <asp:TreeNode Text="试卷信息管理" Value="试卷信息管理">
-                            <asp:TreeNode Text="管理试题信息" Value="浏览试题信息" SelectAction="Expand">
-                                <asp:TreeNode NavigateUrl="~/Manage_Gapfilling.aspx" Text="填空题" Value="填空题">
-                                </asp:TreeNode>
-                                <asp:TreeNode NavigateUrl="~/Manage_Judge.aspx" Text="判断题" Value="判断题">
-                                </asp:TreeNode>
-                                <asp:TreeNode NavigateUrl="~/Manage_Only_Choose.aspx" Text="单选题" Value="单选题">
-                                </asp:TreeNode>
-                                <asp:TreeNode NavigateUrl="~/Manage_Many_Choose.aspx" Text="多选题" Value="多选题">
-                                </asp:TreeNode>
+                            <asp:TreeNode Text="多选题" Value="多选题" NavigateUrl="~/Manage_Many_Choose.aspx">
                             </asp:TreeNode>
-                            <asp:TreeNode Text="添加试题" Value="添加试题"></asp:TreeNode>
-                            <asp:TreeNode Text="删除试题" Value="删除试题"></asp:TreeNode>
+                            <asp:TreeNode Text="单选题" Value="单选题" NavigateUrl="~/Manage_Only_Choose.aspx"></asp:TreeNode>
+                            <asp:TreeNode Text="判断题" Value="判断题" NavigateUrl="~/Manage_Judge.aspx"></asp:TreeNode>
+                            <asp:TreeNode NavigateUrl="~/Manage_Gapfilling.aspx" Text="填空题" Value="填空题">
+                            </asp:TreeNode>
                         </asp:TreeNode>
                         <asp:TreeNode Text="阅卷模块管理" Value="阅卷模块">
-                            <asp:TreeNode Text="分数汇总" Value="分数汇总"></asp:TreeNode>
                             <asp:TreeNode Text="分数查询" Value="分数查询" NavigateUrl="~/Grade.aspx"></asp:TreeNode>
                         </asp:TreeNode>
                     </Nodes>

@@ -9,14 +9,14 @@ public partial class ChangeManyChoose : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Session["AdminName"] == null)
+        if (Session["AdminName"] == null)//如果未登录则回到登录页面
         {
             Response.Redirect("login.aspx");
         }
         this.Label1.Text = Request.QueryString["id"];
         Button2.CausesValidation = false;
         if (!IsPostBack)
-        {
+        {//获取初始试题
             string sqlStr = "SELECT * FROM many_choose WHERE id = '" + Label1.Text + "'";
             MySqlDataReader dr = SqlHelper.GetExecuteReader(sqlStr);
             if (dr.Read())
@@ -33,7 +33,7 @@ public partial class ChangeManyChoose : System.Web.UI.Page
             
         }
     }
-    protected void Button1_Click(object sender, EventArgs e)
+    protected void Button1_Click(object sender, EventArgs e)//更新数据库从而改变试题
     {
         if (Page.IsValid)
         { 

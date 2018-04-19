@@ -18,10 +18,11 @@
             <td>
                 &nbsp;</td>
             <td class="style8">
-                按照学生id或者考试时间查找<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                按照学生id或者考试时间查找<asp:TextBox ID="TextBox1" runat="server" 
+                    ></asp:TextBox>
                 <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="查找" />
-                <asp:Button ID="Button2" runat="server" Text="按时间显示" />
-                <asp:Button ID="Button3" runat="server" Text="显示全部" />
+                <asp:Button ID="Button2" runat="server" Text="按时间显示" onclick="Button2_Click" />
+                <asp:Button ID="Button3" runat="server" Text="显示全部" onclick="Button3_Click" />
             </td>
             <td>
             </td>

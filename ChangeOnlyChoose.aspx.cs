@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
 public partial class ChangeOnlyChoose : System.Web.UI.Page
 {
-    protected void Page_Load(object sender, EventArgs e)
+    protected void Page_Load(object sender, EventArgs e)//如果未登录则回到登录页面
     {
         if (Session["AdminName"] == null)
         {
@@ -33,7 +33,7 @@ public partial class ChangeOnlyChoose : System.Web.UI.Page
 
         }
     }
-    protected void Button1_Click(object sender, EventArgs e)
+    protected void Button1_Click(object sender, EventArgs e)//更新数据库从而改变试题
     {
         if (Page.IsValid)
         {

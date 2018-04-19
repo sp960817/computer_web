@@ -11,7 +11,7 @@ public partial class login : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        txtValidateCode.Focus();
+        txtValidateCode.Focus();//获取焦点
         btnReset.CausesValidation = false;
     }
     protected void btnOK_Click(object sender, EventArgs e)
@@ -58,7 +58,7 @@ public partial class login : System.Web.UI.Page
         txtValidateCode.Text = null;
         txtAdminName.Focus();
     }
-    private string GetAdminRealName(string adminName)
+    private string GetAdminRealName(string adminName)//从数据库获取用户名密码
     {
         string sqlstr = "SELECT AdminRealName From Admin WHERE AdminName = @AdminName";
         MySqlParameter paras = new MySqlParameter("@AdminName", MySqlDbType.VarChar);
