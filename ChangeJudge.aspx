@@ -62,8 +62,8 @@
             答案是：</td>
         <td class="style12">
             <asp:DropDownList ID="DropDownList1" runat="server">
-                <asp:ListItem>对</asp:ListItem>
-                <asp:ListItem>错</asp:ListItem>
+                <asp:ListItem Value="Y">对</asp:ListItem>
+                <asp:ListItem Value="N">错</asp:ListItem>
             </asp:DropDownList>
         </td>
     </tr>

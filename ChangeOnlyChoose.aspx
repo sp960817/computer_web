@@ -133,7 +133,7 @@
                 &nbsp;</td>
             <td class="style8">
                 <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="更改" />
-                <asp:Button ID="Button2" runat="server" Text="返回" />
+                <asp:Button ID="Button2" runat="server" Text="返回" onclick="Button2_Click" />
             </td>
         </tr>
     </table>

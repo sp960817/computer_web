@@ -46,4 +46,8 @@ public partial class ChangeOnlyChoose : System.Web.UI.Page
         }
 
     }
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Manage_Only_Choose.aspx");
+    }
 }
