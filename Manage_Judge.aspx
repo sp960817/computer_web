@@ -28,11 +28,14 @@
         <td>
         </td>
         <td class="style8">
-            <asp:GridView ID="GridView1" runat="server" Width="656px">
+            <asp:GridView ID="GridView1" runat="server" Width="656px" 
+                onrowdeleting="GridView1_RowDeleting">
                 <Columns>
                     <asp:HyperLinkField DataNavigateUrlFields="题号" 
                         DataNavigateUrlFormatString="ChangeJudge.aspx?id={0}" Text="更改" />
+                    <asp:CommandField ShowDeleteButton="True" />
                 </Columns>
+               
             </asp:GridView>
         </td>
         <td>

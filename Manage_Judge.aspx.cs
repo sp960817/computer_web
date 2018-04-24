@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using MySql.Data.MySqlClient;
 public partial class Manage_judge : System.Web.UI.Page
 {
     static string selectStr = "";
@@ -32,5 +33,33 @@ public partial class Manage_judge : System.Web.UI.Page
         GridView1.PageSize = 15;
         GridView1.DataBind();
     }
+
     
+    protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+    {
+        string idid = GridView1.DataKeys[e.RowIndex].Value.ToString();
+        int id = Convert.ToInt32(idid);
+        string mysql = "DELETE FROM judge WHERE id ='"+id+"'";
+        int ll =SqlHelper.GetExecuteNonQuery(mysql);
+        if (ll > 0)
+        {
+            string getMAX = "SELECT id FROM judge WHERE id = (SELECT MAX(id) FROM judge)";
+            MySqlDataReader dr= SqlHelper.GetExecuteReader(getMAX);
+            if (dr.Read()) {
+                int MAX = Convert.ToInt32(dr["id"].ToString());
+                dr.Close();
+                for (int j = id + 1; j <= MAX; j++)
+                {
+                    string upid = "UPDATE judge SET id = id-1 WHERE id = '" + j + "'";
+                    SqlHelper.GetExecuteNonQuery(upid);
+                }
+            }
+            
+            SqlHelper.Closeconn();
+        }
+        else 
+        {
+            SqlHelper.MsgBox("删除失败，请刷新",Page);
+        }
+    }
 }

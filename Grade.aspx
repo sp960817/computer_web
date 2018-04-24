@@ -10,12 +10,16 @@
         {
             width: 650px;
         }
+        .style9
+        {
+            width: 141px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
     <table class="style7">
         <tr>
-            <td>
+            <td class="style9">
                 &nbsp;</td>
             <td class="style8">
                 按照学生id或者考试时间查找<asp:TextBox ID="TextBox1" runat="server" 
@@ -28,7 +32,7 @@
             </td>
         </tr>
         <tr>
-            <td>
+            <td class="style9">
                 &nbsp;</td>
             <td class="style8">
                 <asp:GridView ID="GridView1" runat="server" Width="756px">
