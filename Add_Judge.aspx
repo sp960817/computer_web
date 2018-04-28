@@ -1,30 +1,17 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ChangeJudge.aspx.cs" Inherits="ChangeJudge" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Add_Judge.aspx.cs" Inherits="Add_Judge" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <style type="text/css">
-    .style7
-    {
-        width: 100%;
-    }
-</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
     <table class="style7">
     <tr>
         <td >
-            您要更改的判断题题号是：</td>
-        <td >
-            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-        </td>
-    </tr>
-    <tr>
-        <td >
-            更改后的题目内容：</td>
+            添加题目的内容：</td>
         <td >
             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
                 ControlToValidate="TextBox1" Display="Dynamic" ErrorMessage="必填项" 
-                ForeColor="Red"></asp:RequiredFieldValidator>
+                ForeColor="Red" ValidationGroup="1"></asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
@@ -39,10 +26,11 @@
     </tr>
     <tr>
         <td colspan="2">
-            <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="更改" />
+            <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="添加" 
+                ValidationGroup="1" />
             <asp:Button ID="Button2" runat="server" onclick="Button2_Click" Text="返回" />
         </td>
     </tr>
-</table>
+    </table>
 </asp:Content>
 

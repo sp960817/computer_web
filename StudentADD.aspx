@@ -1,41 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="StudentADD.aspx.cs" Inherits="StudentADD" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <style type="text/css">
-        .style7
-        {
-            width: 100%;
-        }
-        .style8
-        {
-            text-align: right;
-            width: 586px;
-        }
-        .style10
-        {
-            text-align: left;
-        }
-        .style11
-        {
-            text-align: right;
-            width: 586px;
-            height: 25px;
-        }
-        .style12
-        {
-            text-align: left;
-            height: 25px;
-        }
-    </style>
+  
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
     <h4>
         添加学生资料</h4>
-    <table align="right" class="style7">
+    <table align="center">
         <tr>
-            <td class="style11">
+            <td >
                 学号</td>
-            <td class="style12">
+            <td >
                 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
                     ControlToValidate="TextBox1" Display="Dynamic" ErrorMessage="必填项" 
@@ -46,9 +21,9 @@
             </td>
         </tr>
         <tr>
-            <td class="style8">
+            <td >
                 学生姓名</td>
-            <td class="style10">
+            <td >
                 <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
                     ControlToValidate="TextBox2" Display="Dynamic" ErrorMessage="必填项" 
@@ -59,9 +34,9 @@
             </td>
         </tr>
         <tr>
-            <td class="style8">
+            <td >
                 班级</td>
-            <td class="style10">
+            <td >
                 <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
                     ControlToValidate="TextBox3" Display="Dynamic" ErrorMessage="必填项" 
@@ -72,9 +47,9 @@
             </td>
         </tr>
         <tr>
-            <td class="style8">
+            <td >
                 密码</td>
-            <td class="style10">
+            <td >
                 <asp:TextBox ID="TextBox4" runat="server" TextMode="Password"></asp:TextBox>
                 如果不填则为默认密码（123456）<asp:RegularExpressionValidator 
                     ID="RegularExpressionValidator4" runat="server" ControlToValidate="TextBox4" 

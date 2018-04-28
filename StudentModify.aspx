@@ -6,37 +6,7 @@
         {
             width: 100%;
         }
-        .style8
-        {
-            text-align: right;
-            height: 20px;
-            width: 461px;
-        }
-        .style9
-        {
-            height: 20px;
-            text-align: left;
-        }
-        .style10
-        {
-            text-align: right;
-            width: 461px;
-        }
-        .style11
-        {
-            text-align: left;
-        }
-        .style12
-        {
-            text-align: right;
-            width: 461px;
-            height: 25px;
-        }
-        .style13
-        {
-            text-align: left;
-            height: 25px;
-        }
+       
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
@@ -44,9 +14,9 @@
         修改学生信息</p>
     <table class="style7">
         <tr>
-            <td class="style8" dir="ltr">
+            <td dir="ltr">
                 学号：</td>
-            <td class="style9">
+            <td >
                 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
                     ControlToValidate="TextBox1" Display="Dynamic" ErrorMessage="必填项" 
@@ -57,9 +27,9 @@
             </td>
         </tr>
         <tr>
-            <td class="style10">
+            <td >
                 姓名：</td>
-            <td class="style11">
+            <td >
                 <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
                     ControlToValidate="TextBox2" Display="Dynamic" ErrorMessage="必填项" 
@@ -70,9 +40,9 @@
             </td>
         </tr>
         <tr>
-            <td class="style12">
+            <td >
                 班级：</td>
-            <td class="style13">
+            <td >
                 <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
                     ControlToValidate="TextBox3" Display="Dynamic" ErrorMessage="必填项" 
@@ -83,19 +53,17 @@
             </td>
         </tr>
         <tr>
-            <td class="style8">
+            <td >
                 密码：</td>
-            <td class="style9">
+            <td >
                 <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
                 <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" 
                     ControlToValidate="TextBox4" ErrorMessage="只能输入字母或密码" ForeColor="Red" 
                     ValidationExpression="[A-Za-z0-9]+$"></asp:RegularExpressionValidator>
             </td>
         </tr>
-        <tr>
-            <td class="style8">
-                &nbsp;</td>
-            <td class="style9">
+        <tr >
+            <td align="center" colspan="2" >
                 <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="确认修改" />
                 <asp:Button ID="Button2" runat="server" onclick="Button2_Click" Text="返回" />
             </td>

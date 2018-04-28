@@ -1,62 +1,29 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ChangePassword.aspx.cs" Inherits="ChangePassword" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    
     <style type="text/css">
-        .style8
+        .style1
         {
-            width: 464px;
-        }
-        .style9
-        {
-            text-align: center;
-        }
-        .style10
-        {
-            width: 464px;
-            height: 20px;
-        }
-        .style11
-        {
-            height: 20px;
-        }
-        .style12
-        {
-            height: 20px;
-            width: 319px;
-        }
-        .style13
-        {
-            width: 319px;
-        }
-        .style14
-        {
-            width: 464px;
-            height: 23px;
-        }
-        .style15
-        {
-            width: 319px;
-            height: 23px;
-        }
-        .style16
-        {
-            height: 23px;
+            height: 24px;
         }
     </style>
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
-    <table style="text-align: center" " class="style7">
+    <table style="text-align: center" ">
         <tr>
-            <td class="style9" colspan="3" dir="rtl">
+        <td>
+            < dir="rtl">
                 修改登录密码</td>
         </tr>
         <tr>
-            <td class="style10" dir="rtl">
+            <td  dir="rtl" class="style1">
                 请输入密码</td>
-            <td class="style12">
+            <td class="style1">
                 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
             </td>
-            <td class="style11">
+            <td  >
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
                     ControlToValidate="TextBox1" Display="Dynamic" ErrorMessage="必须输入密码" 
                     ForeColor="Red"></asp:RequiredFieldValidator>
@@ -66,12 +33,12 @@
             </td>
         </tr>
         <tr>
-            <td class="style14" dir="rtl">
+            <td  dir="rtl">
                 再次输入密码</td>
-            <td class="style15">
+            <td >
                 <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
             </td>
-            <td class="style16">
+            <td >
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
                     ControlToValidate="TextBox2" Display="Dynamic" ErrorMessage="必须输入密码" 
                     ForeColor="Red"></asp:RequiredFieldValidator>
@@ -81,9 +48,9 @@
             </td>
         </tr>
         <tr>
-            <td class="style8" dir="rtl">
+            <td dir="rtl">
                 &nbsp;</td>
-            <td class="style13">
+            <td >
                 <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="修改" />
                 <asp:Button ID="Button2" runat="server" Text="返回" />
             </td>

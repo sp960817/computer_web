@@ -5,68 +5,22 @@
         .style7
         {
             width: 100%;
-        }
-        .style8
-        {
-            text-align: left;
-        }
-        .style9
-        {
-            text-align: right;
-            width: 563px;
-        }
-        .style10
-        {
-            width: 563px;
-        }
-        .style11
-        {
-            text-align: right;
-            width: 563px;
-            height: 23px;
-        }
-        .style12
-        {
-            height: 23px;
-            text-align: left;
-        }
-        .style13
-        {
-            text-align: right;
-            width: 563px;
-            height: 20px;
-        }
-        .style14
-        {
-            height: 20px;
-            text-align: left;
-        }
-        .style15
-        {
-            text-align: right;
-            width: 563px;
-            height: 25px;
-        }
-        .style16
-        {
-            text-align: left;
-            height: 25px;
-        }
+
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
     <table class="style7">
         <tr>
-            <td class="style13">
+            <td >
                 您要更改的题号是：</td>
-            <td class="style14">
+            <td >
                 <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
             </td>
         </tr>
         <tr>
-            <td class="style11">
+            <td >
                 更改后的题目是：</td>
-            <td class="style12">
+            <td >
                 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
                     ControlToValidate="TextBox1" Display="Dynamic" ErrorMessage="必填项" 
@@ -74,9 +28,9 @@
             </td>
         </tr>
         <tr>
-            <td class="style11">
+            <td >
                 A：</td>
-            <td class="style12">
+            <td >
                 <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
                     ControlToValidate="TextBox2" Display="Dynamic" ErrorMessage="必填项" 
@@ -84,9 +38,9 @@
             </td>
         </tr>
         <tr>
-            <td class="style15">
+            <td >
                 B：</td>
-            <td class="style16">
+            <td >
                 <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
                     ControlToValidate="TextBox3" Display="Dynamic" ErrorMessage="必填项" 
@@ -94,9 +48,9 @@
             </td>
         </tr>
         <tr>
-            <td class="style9">
+            <td >
                 C：</td>
-            <td class="style8">
+            <td >
                 <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
                     ControlToValidate="TextBox4" Display="Dynamic" ErrorMessage="必填项" 
@@ -104,9 +58,9 @@
             </td>
         </tr>
         <tr>
-            <td class="style9">
+            <td >
                 D：</td>
-            <td class="style8">
+            <td >
                 <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
                     ControlToValidate="TextBox5" Display="Dynamic" ErrorMessage="必填项" 
@@ -114,9 +68,9 @@
             </td>
         </tr>
         <tr>
-            <td class="style9">
+            <td >
                 答案：</td>
-            <td class="style8">
+            <td >
                 <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
                 请按照A-D的顺序填入例（BCD）<asp:RegularExpressionValidator 
                     ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox6" 
@@ -125,9 +79,7 @@
             </td>
         </tr>
         <tr>
-            <td class="style10">
-                &nbsp;</td>
-            <td class="style8">
+            <td colspan="2">
                 <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="更改" />
                 <asp:Button ID="Button2" runat="server" Text="返回" onclick="Button2_Click" />
             </td>

@@ -6,28 +6,26 @@
     {
         width: 100%;
     }
-    .style8
-    {
-        width: 595px;
-    }
 </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
     <table class="style7">
     <tr>
-        <td>
-        </td>
-        <td class="style8">
+
+        <td >
             <h3>
                 判断题管理</h3>
-        </td>
-        <td>
         </td>
     </tr>
     <tr>
         <td>
-        </td>
-        <td class="style8">
+            <a href="Add_Judge.aspx">添加判断题</a>
+        </td>    
+        
+    </tr>
+    <tr>
+
+        <td >
             <asp:GridView ID="GridView1" runat="server" Width="656px" 
                 onrowdeleting="GridView1_RowDeleting">
                 <Columns>
@@ -38,8 +36,7 @@
                
             </asp:GridView>
         </td>
-        <td>
-        </td>
+
     </tr>
 </table>
 </asp:Content>

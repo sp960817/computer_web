@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/admin.aspx" title="后台管理"  description="">
+    <siteMapNode url="" title="管理员管理"  description="">
+      <siteMapNode url="~/ChangePassword.aspx" title="修改管理员密码"  description="" />
+    </siteMapNode>
+    <siteMapNode url="" title="学生信息管理"  description="">
+      <siteMapNode url="~/See_student.aspx" title="管理学生信息"  description="" />
+    </siteMapNode>
+    <siteMapNode url="" title="试题库管理"  description="">
+      <siteMapNode url="~/Manage_Number.aspx" title="管理题目数量"  description="" />
+      <siteMapNode url="~/Manage_Only_Choose.aspx" title="单选题管理"  description="" />
+      <siteMapNode url="~/Manage_Many_Choose.aspx" title="多选题管理"  description="" />
+      <siteMapNode url="~/Manage_Judge.aspx" title="判断题管理"  description="" />
+      <siteMapNode url="~/Manage_Gapfilling.aspx" title="填空题管理"  description="" />
+    </siteMapNode>
+    <siteMapNode url="~/Grade.aspx" title="成绩查询"  description="">
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

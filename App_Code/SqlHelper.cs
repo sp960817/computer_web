@@ -15,7 +15,7 @@ public class SqlHelper
 {
     private static MySqlConnection conn = new MySqlConnection();
     private static MySqlCommand cmd = new MySqlCommand();
-    private static void Openconn()
+    public static void Openconn()
     {
         if (conn.State == ConnectionState.Closed)
         {
