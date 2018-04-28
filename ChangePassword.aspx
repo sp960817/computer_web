@@ -11,10 +11,9 @@
     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
-    <table style="text-align: center" ">
+    <table style="text-align: center">
         <tr>
-        <td>
-            < dir="rtl">
+        <td colspan="3">
                 修改登录密码</td>
         </tr>
         <tr>
@@ -48,9 +47,7 @@
             </td>
         </tr>
         <tr>
-            <td dir="rtl">
-                &nbsp;</td>
-            <td >
+            <td colspan="3">
                 <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="修改" />
                 <asp:Button ID="Button2" runat="server" Text="返回" />
             </td>
