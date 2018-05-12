@@ -26,9 +26,7 @@ public partial class Only_Choose : System.Web.UI.Page
     {
         DataSet ds = SqlHelper.GetDataSet(seleStr);
         GridView1.DataSource = ds;
-        GridView1.AllowPaging = true;
         GridView1.DataKeyNames = new string[] { "题号" };
-        GridView1.PageSize = 15;
         GridView1.DataBind();
     }
 
@@ -64,4 +62,11 @@ public partial class Only_Choose : System.Web.UI.Page
             SqlHelper.Closeconn();
         }
     }
+    protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+    {
+        GridView1.PageIndex = e.NewPageIndex;
+        selectStr = "SELECT id AS 题号,subject AS 题目,A,B,C,D,answer AS 答案 FROM only_choose";
+        Show(selectStr);
+    }
+    
 }

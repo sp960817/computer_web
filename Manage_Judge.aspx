@@ -27,7 +27,8 @@
 
         <td >
             <asp:GridView ID="GridView1" runat="server" Width="656px" 
-                onrowdeleting="GridView1_RowDeleting">
+                onrowdeleting="GridView1_RowDeleting" AllowPaging="True" PageSize="5"
+                onpageindexchanging="GridView1_PageIndexChanging">
                 <Columns>
                     <asp:HyperLinkField DataNavigateUrlFields="题号" 
                         DataNavigateUrlFormatString="ChangeJudge.aspx?id={0}" Text="更改" />

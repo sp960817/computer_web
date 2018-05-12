@@ -25,7 +25,8 @@
 
         <td >
             <asp:GridView ID="GridView1" runat="server" Width="665px" 
-                onrowdeleting="GridView1_RowDeleting">
+                onrowdeleting="GridView1_RowDeleting" AllowPaging="True" 
+                onpageindexchanging="GridView1_PageIndexChanging" PageSize="5">
                 <Columns>
                     <asp:HyperLinkField DataNavigateUrlFields="题号" 
                         DataNavigateUrlFormatString="ChangeGapfilling.aspx?id={0}" HeaderText="更改" 

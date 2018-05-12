@@ -25,7 +25,8 @@
         
         <td colspan="3" align="center">
             <asp:GridView ID="GridView1" runat="server" CssClass="style10" Width="665px"
-            onrowdeleting="GridView1_RowDeleting">
+            onrowdeleting="GridView1_RowDeleting" AllowPaging="True"  
+                onpageindexchanging="GridView1_PageIndexChanging"  PageSize="5">
                 <Columns>
                     <asp:HyperLinkField DataNavigateUrlFields="题号" 
                         DataNavigateUrlFormatString="ChangeOnlyChoose.aspx?id={0}" Text="更改" />
