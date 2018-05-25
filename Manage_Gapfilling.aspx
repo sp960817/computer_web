@@ -18,7 +18,7 @@
     </tr>
     <tr>
         <td>
-            <a href="">添加填空题</a>
+            <a href="Add_Gapfilling.aspx">添加填空题</a>
         </td>
     </tr>
     <tr>
