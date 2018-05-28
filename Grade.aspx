@@ -18,11 +18,13 @@
                 <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="查找" />
                 <asp:Button ID="Button2" runat="server" Text="按时间显示" onclick="Button2_Click" />
                 <asp:Button ID="Button3" runat="server" Text="显示全部" onclick="Button3_Click" />
+                <asp:Button ID="Button4" runat="server" onclick="Button4_Click" Text="清除所有成绩" />
             </td>
         </tr>
         <tr>
             <td >
-                <asp:GridView ID="GridView1" runat="server" Width="756px">
+                <asp:GridView ID="GridView1" runat="server" Width="756px" AllowPaging="True" 
+                    onpageindexchanging="GridView1_PageIndexChanging">
                 </asp:GridView>
             </td>
         </tr>
