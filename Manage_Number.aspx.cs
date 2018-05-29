@@ -17,11 +17,11 @@ public partial class Manage_Number : System.Web.UI.Page
             Response.Redirect("login.aspx");
         }
         if (!IsPostBack)
-        { 
-        string judge = "SELECT id FROM judge";
-        string gapfilling ="SELECT id FROM gapfilling";
-        string onlychoose = "SELECT id FROM only_choose";
-        string manychoose = "SELECT id FROM many_choose";
+        {
+            string judge = "SELECT id FROM judge WHERE id<>(SELECT MAX(id) FROM judge)";
+            string gapfilling = "SELECT id FROM gapfilling WHERE id<>(SELECT MAX(id) FROM gapfilling)";
+            string onlychoose = "SELECT id FROM only_choose WHERE id<>(SELECT MAX(id) FROM only_choose)";
+            string manychoose = "SELECT id FROM many_choose WHERE id<>(SELECT MAX(id) FROM many_choose)";
         Getn(judge, DropDownList4);
         Getn(gapfilling, DropDownList3);
         Getn(onlychoose, DropDownList1);

@@ -10,7 +10,7 @@
         <tr>
             <td >
                 学号</td>
-            <td >
+            <td style="text-align: left" >
                 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
                     ControlToValidate="TextBox1" Display="Dynamic" ErrorMessage="必填项" 
@@ -23,7 +23,7 @@
         <tr>
             <td >
                 学生姓名</td>
-            <td >
+            <td style="text-align: left" >
                 <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
                     ControlToValidate="TextBox2" Display="Dynamic" ErrorMessage="必填项" 
@@ -36,7 +36,7 @@
         <tr>
             <td >
                 班级</td>
-            <td >
+            <td style="text-align: left" >
                 <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
                     ControlToValidate="TextBox3" Display="Dynamic" ErrorMessage="必填项" 
@@ -49,8 +49,8 @@
         <tr>
             <td >
                 密码</td>
-            <td >
-                <asp:TextBox ID="TextBox4" runat="server" TextMode="Password"></asp:TextBox>
+            <td style="text-align: left" >
+                &nbsp;<asp:TextBox ID="TextBox4" runat="server" TextMode="Password"></asp:TextBox>
                 如果不填则为默认密码（123456）<asp:RegularExpressionValidator 
                     ID="RegularExpressionValidator4" runat="server" ControlToValidate="TextBox4" 
                     Display="Dynamic" ErrorMessage="只能输入字母或数字" ForeColor="Red" 

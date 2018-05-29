@@ -40,11 +40,6 @@
                         Width="166px">
                     </asp:TreeView>
                 </div>
-                <div class="logined">
-                    管理员：<asp:Label ID="lblAdminName" runat="server"></asp:Label><br />
-                    权限：<asp:Label ID="lblAdminGradeName" runat="server"></asp:Label><br />
-                    <asp:LinkButton ID="lbtnExit" runat="server" OnClick="lbtnExit_Click">退出后台管理</asp:LinkButton>
-                </div>
                 <!--左侧边栏-结束-->
             </div>
             <div id="right-main">
@@ -59,7 +54,7 @@
         <div id="footer">
             <!--页脚-开始-->
             <span style="color: #fff;">2010-2020 版权所有<br />
-                地址：中国•北京 热线：010-82011666</span>
+                地址：中国•北京 热线：010-69321452</span>
             <!--页脚-结束-->
         </div>
         <!--页面层容器-结束-->

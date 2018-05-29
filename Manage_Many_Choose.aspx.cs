@@ -42,7 +42,7 @@ public partial class Manage_Many_Choose : System.Web.UI.Page
             {
                 int MAX = Convert.ToInt32(dr["id"].ToString());
                 dr.Close();
-                if (MAX > n)
+                if (MAX > n+1)
                 {
                     dele(e);
                 }

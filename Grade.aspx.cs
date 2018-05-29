@@ -23,7 +23,7 @@ public partial class Grade : System.Web.UI.Page
     protected void Button1_Click(object sender, EventArgs e)//模糊查询
     {
         string mm = TextBox1.Text;
-        selectStr = "SELECT testID AS 试卷编号,studentID AS 学号,name AS 姓名,gapfilling AS 填空成绩,judge AS 判断成绩,only_choose AS 单选成绩, many_choose AS 多选成绩,grade AS 总成绩 FROM grade WHERE studentID = '"+mm+"' OR testID LIKE '%"+mm+"%'";
+        selectStr = "SELECT testID AS 试卷编号,studentID AS 学号,name AS 姓名,gapfilling AS 填空成绩,judge AS 判断成绩,only_choose AS 单选成绩, many_choose AS 多选成绩,grade AS 总成绩 FROM grade WHERE studentID = '"+mm+"' OR testID LIKE '%"+mm+"%' ORDER BY testID DESC";
         ShowGrade(selectStr);
     }
     private void ShowGrade(string seleStr)//通过sql语句变更GridView
